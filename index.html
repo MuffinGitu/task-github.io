@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Угадайка</title>
+    <!-- Бутстрап... Как им пользоваться??? -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row game-card align-items-center">
+            <div class="col col-md-4 offset-md-4">
+                <div class="card text-center">
+                    <!-- Блок для ввода числа и стара игры (скрывается после ввода чисел и нажатия кнопки "Старт") -->
+                    <div id="inputvaluebox" class="card-body">
+                        <div class="row">
+                            <h3 class="card-title m-0">Введите числа и загадайте значение в указанном диапазоне</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <form action="#">
+                                    <input type="text" id="minvalue" placeholder="Min: -999:">
+                                    <input type="text" id="maxvalue" placeholder="Max: 999">
+                                    <button type="submit" id="btnStart">Старт</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Блок вывода вспомогательных сообщений -->
+                    <div id="messagebox" class="card-body collapse">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="card-title m-0"><span id="textmassage"></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Блок номера вопроса -->
+                    <div class="card-header">
+                        <p class="m-0">Вопрос №<span id="orderNumberField"></span></p>
+                    </div>
+                    <!-- Блок вывода ответа -->
+                    <div class="card-body">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <h3 class="card-title m-0"><span id="answerField"></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Блок кнопок управления -->
+                    <div class="card-body">
+                        <div class="btn-group">
+                            <button class="btn btn-info" id="btnLess">&#129047;<br>меньше</button>
+                            <button class="btn btn-success btn-lg" id="btnEqual">Верно!</button>
+                            <button class="btn btn-info" id="btnOver">больше<br>&#129045;</button>
+                        </div>
+                    </div>
+                    <!-- Блок кнопки рестарт -->
+                    <div class="card-footer">
+                        <button id="btnRetry">Заново</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
